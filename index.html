@@ -423,6 +423,13 @@ footer{background:#081C30;color:#B9C9D6;padding:56px 0 24px;}
 .qty-control button{background:var(--bg);border:none;width:34px;height:34px;font-size:1.1rem;}
 .qty-control span{width:38px;text-align:center;font-family:'IBM Plex Mono';font-weight:600;}
 .modal-actions{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+.mpesa-note{
+  display:flex;gap:9px;align-items:flex-start;margin-top:6px;padding:11px 13px;
+  background:var(--teal-dim);border:1px solid #0FBE8F33;border-radius:10px;
+}
+.mpesa-note svg{width:17px;height:17px;color:var(--teal);flex-shrink:0;margin-top:1px;}
+.mpesa-note span{font-size:0.8rem;color:var(--ink-soft);line-height:1.5;}
+.mpesa-note strong{color:var(--ink);}
 .related-title{font-family:'IBM Plex Mono';font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink-soft);margin-top:14px;}
 .related-row{display:flex;gap:10px;overflow-x:auto;padding-top:8px;}
 .related-item{flex-shrink:0;width:110px;cursor:pointer;}
@@ -559,7 +566,7 @@ footer{background:#081C30;color:#B9C9D6;padding:56px 0 24px;}
     </div>
     <div class="trust-item">
       <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-      <div><strong>M-Pesa accepted</strong><span>Pay easily, no cash needed</span></div>
+      <div><strong>M-Pesa accepted</strong><span>Buy Goods Till: 4061876</span></div>
     </div>
   </div>
 </section>
@@ -606,7 +613,7 @@ footer{background:#081C30;color:#B9C9D6;padding:56px 0 24px;}
       </div>
       <div class="about-icon-item">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-        <strong>M-Pesa payment</strong><span>Buy Goods & Till available</span>
+        <strong>M-Pesa payment</strong><span>Buy Goods Till: 4061876</span>
       </div>
     </div>
   </div>
@@ -628,6 +635,10 @@ footer{background:#081C30;color:#B9C9D6;padding:56px 0 24px;}
       <div class="footer-contact-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
         <span>photonelectronics01@gmail.com</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        <span>M-Pesa Buy Goods Till: <strong style="color:#fff;">4061876</strong></span>
       </div>
       <div class="social-row">
         <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
@@ -841,7 +852,7 @@ function filteredProducts(){
 
 function whatsappLink(product, qty){
   qty = qty || 1;
-  const msg = `Hi PHOTON Electronics, I'm interested in ${product.name} (KES ${product.price.toLocaleString()}) x${qty}. Is it available?`;
+  const msg = `Hi PHOTON Electronics, I'm interested in ${product.name} (KES ${product.price.toLocaleString()}) x${qty}. Is it available? I can pay via M-Pesa Till 4061876.`;
   return `https://wa.me/${SHOP_PHONE}?text=${encodeURIComponent(msg)}`;
 }
 
@@ -958,6 +969,10 @@ function openModal(id){
         </a>
         <button class="btn btn-ghost" style="color:var(--ink);border-color:var(--line);background:var(--bg);" id="modalQuoteBtn">${quoteList.some(q=>q.id===p.id)?'Added to quote ✓':'Add to quote list'}</button>
       </div>
+      <div class="mpesa-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        <span>Pay via M-Pesa — <strong>Buy Goods Till: 4061876</strong>. Send us your confirmation code on WhatsApp to complete your order.</span>
+      </div>
       ${related.length ? `<div class="related-title">You may also need</div>
       <div class="related-row">
         ${related.map(r=>`<div class="related-item" data-open="${r.id}"><img src="${r.img}" alt="${r.name}"><span>${r.name}</span></div>`).join('')}
@@ -1035,7 +1050,7 @@ function updateQuoteUI(){
     const p = PRODUCTS.find(x=>x.id===q.id);
     return `• ${p.name} — KES ${p.price.toLocaleString()}`;
   }).join('\n');
-  const msg = `Hi PHOTON Electronics, I'd like a quote for:\n${lines}\n\nEstimated total: KES ${total.toLocaleString()}`;
+  const msg = `Hi PHOTON Electronics, I'd like a quote for:\n${lines}\n\nEstimated total: KES ${total.toLocaleString()}\n\nI can pay via M-Pesa Till 4061876 once confirmed.`;
   document.getElementById('drawerWhatsapp').href = `https://wa.me/${SHOP_PHONE}?text=${encodeURIComponent(msg)}`;
   drawerFoot.style.display = 'flex';
 }
