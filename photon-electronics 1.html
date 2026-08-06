@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHOTON Electronics — Electrical & Electronics Supplies, Utawala Nairobi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A2540;
+  --navy-2:#123A5E;
+  --navy-3:#0E2F4D;
+  --teal:#0FBE8F;
+  --teal-dim:#0FBE8F22;
+  --amber:#FF9500;
+  --amber-dark:#E67E00;
+  --whatsapp:#25D366;
+  --bg:#F5F8FB;
+  --surface:#FFFFFF;
+  --ink:#0F1B2A;
+  --ink-soft:#5B6B7C;
+  --line:#E3E9F0;
+  --radius:14px;
+  --shadow:0 6px 24px rgba(10,37,64,0.08);
+  --shadow-lg:0 20px 60px rgba(10,37,64,0.18);
+  font-size:16px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.display{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  letter-spacing:-0.01em;
+  margin:0;
+}
+.mono{font-family:'IBM Plex Mono',monospace;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px;}
+.container{max-width:1240px;margin:0 auto;padding:0 24px;}
+@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important;}}
+
+/* ===== Header ===== */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:var(--navy);
+  border-bottom:1px solid var(--navy-2);
+}
+.header-inner{
+  display:flex;align-items:center;gap:20px;
+  padding:14px 24px;max-width:1240px;margin:0 auto;
+}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;flex-shrink:0;}
+.logo svg{width:30px;height:30px;}
+.logo-text{font-family:'Space Grotesk';font-weight:700;font-size:1.25rem;letter-spacing:0.02em;}
+.logo-text span{color:var(--teal);}
+.main-nav{display:flex;gap:28px;flex-shrink:0;}
+.main-nav a{color:#CFDCE8;font-weight:500;font-size:0.95rem;transition:color .15s;white-space:nowrap;}
+.main-nav a:hover{color:#fff;}
+.header-search{
+  flex:1;max-width:420px;position:relative;margin-left:auto;
+}
+.header-search input{
+  width:100%;padding:10px 40px 10px 14px;border-radius:10px;border:1px solid var(--navy-2);
+  background:#0E3357;color:#fff;font-size:0.9rem;
+}
+.header-search input::placeholder{color:#8FA6BB;}
+.header-search input:focus{background:#fff;color:var(--ink);}
+.header-search svg{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:#8FA6BB;pointer-events:none;}
+.header-search input:focus + svg{stroke:var(--ink-soft);}
+.header-actions{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+.icon-btn{
+  position:relative;background:none;border:none;color:#fff;padding:6px;border-radius:8px;display:flex;
+}
+.icon-btn svg{width:22px;height:22px;}
+.icon-btn:hover{background:var(--navy-2);}
+.badge{
+  position:absolute;top:-2px;right:-2px;background:var(--amber);color:var(--navy);
+  font-size:0.65rem;font-weight:700;border-radius:50%;min-width:17px;height:17px;
+  display:flex;align-items:center;justify-content:center;padding:0 3px;
+}
+.hamburger{display:none;}
+@media(max-width:900px){
+  .main-nav{display:none;}
+  .header-search{display:none;}
+  .hamburger{display:flex;}
+  .header-inner{padding:12px 16px;}
+}
+.mobile-panel{
+  display:none;background:var(--navy-2);border-top:1px solid var(--navy-3);
+}
+.mobile-panel.open{display:block;}
+.mobile-panel .container{padding:16px 24px;display:flex;flex-direction:column;gap:14px;}
+.mobile-search{position:relative;}
+.mobile-search input{width:100%;padding:11px 40px 11px 14px;border-radius:10px;border:1px solid var(--navy-3);background:#0E3357;color:#fff;font-size:0.95rem;}
+.mobile-search svg{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:#8FA6BB;}
+.mobile-panel a{color:#DCE7F0;font-weight:500;padding:8px 0;border-bottom:1px solid var(--navy-3);}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,var(--navy) 0%,var(--navy-3) 55%,#0A3352 100%);
+  color:#fff;
+}
+.hero-trace{position:absolute;inset:0;width:100%;height:100%;opacity:0.35;pointer-events:none;}
+.hero-inner{
+  position:relative;z-index:2;
+  max-width:1240px;margin:0 auto;padding:64px 24px 56px;
+  display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'IBM Plex Mono';font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--teal);background:var(--teal-dim);border:1px solid #0FBE8F55;
+  padding:6px 12px;border-radius:100px;margin-bottom:18px;
+}
+.hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 1.6s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.25;}}
+.hero h1{font-size:clamp(2rem,4.2vw,3.1rem);line-height:1.08;font-weight:700;}
+.hero h1 em{font-style:normal;color:var(--teal);}
+.hero p{margin-top:18px;font-size:1.05rem;color:#C6D6E4;max-width:480px;line-height:1.6;}
+.hero-ctas{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:10px;
+  font-weight:600;font-size:0.95rem;border:none;transition:transform .15s, box-shadow .15s;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:var(--amber);color:var(--navy);box-shadow:0 8px 24px rgba(255,149,0,0.35);}
+.btn-primary:hover{background:var(--amber-dark);}
+.btn-ghost{background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.25);}
+.btn-ghost:hover{background:rgba(255,255,255,0.16);}
+.btn-whatsapp{background:var(--whatsapp);color:#fff;}
+.btn-whatsapp:hover{background:#1FB855;}
+.btn svg{width:18px;height:18px;}
+
+.hero-carousel{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;}
+.hero-slide{
+  position:absolute;inset:0;opacity:0;transition:opacity .6s ease;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  background-size:cover;background-position:center;
+}
+.hero-slide.active{opacity:1;}
+.hero-slide-tag{
+  align-self:flex-start;margin:16px 0 0 16px;background:var(--amber);color:var(--navy);
+  font-family:'IBM Plex Mono';font-size:0.72rem;font-weight:600;padding:5px 10px;border-radius:6px;
+}
+.hero-slide-caption{
+  background:linear-gradient(0deg,rgba(10,37,64,0.92),rgba(10,37,64,0));
+  padding:40px 20px 18px;color:#fff;
+}
+.hero-slide-caption strong{display:block;font-family:'Space Grotesk';font-size:1.15rem;}
+.hero-slide-caption span{font-size:0.85rem;color:#D6E3EC;}
+.carousel-dots{position:absolute;bottom:14px;right:16px;display:flex;gap:6px;z-index:3;}
+.carousel-dots button{width:8px;height:8px;border-radius:50%;border:none;background:rgba(255,255,255,0.4);padding:0;}
+.carousel-dots button.active{background:var(--amber);width:22px;border-radius:5px;transition:width .25s;}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;padding-top:36px;}
+  .hero-carousel{aspect-ratio:16/10;}
+}
+
+/* circuit divider */
+.circuit-divider{display:block;width:100%;height:46px;background:var(--bg);}
+.circuit-divider path.wire{stroke:var(--line);stroke-width:2;fill:none;}
+.circuit-divider circle.node{fill:var(--teal);}
+.circuit-divider .current{fill:var(--amber);}
+
+/* ===== Trust strip ===== */
+.trust-strip{background:var(--surface);border-bottom:1px solid var(--line);}
+.trust-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  padding:22px 24px;max-width:1240px;margin:0 auto;
+}
+.trust-item{display:flex;align-items:center;gap:12px;}
+.trust-item .icon{
+  width:38px;height:38px;flex-shrink:0;border-radius:10px;background:var(--teal-dim);
+  display:flex;align-items:center;justify-content:center;color:var(--teal);
+}
+.trust-item .icon svg{width:20px;height:20px;}
+.trust-item strong{display:block;font-size:0.88rem;}
+.trust-item span{font-size:0.78rem;color:var(--ink-soft);}
+@media(max-width:900px){.trust-grid{grid-template-columns:repeat(2,1fr);}}
+
+/* ===== Shop ===== */
+.shop{padding:52px 0 60px;}
+.shop-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
+.shop-head h2{font-size:1.7rem;}
+.shop-head .count{font-family:'IBM Plex Mono';font-size:0.85rem;color:var(--ink-soft);}
+
+.chip-row{
+  display:flex;gap:10px;overflow-x:auto;padding-bottom:10px;margin-bottom:24px;
+  scrollbar-width:thin;
+}
+.chip-row::-webkit-scrollbar{height:5px;}
+.chip-row::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px;}
+.chip{
+  flex-shrink:0;padding:9px 16px;border-radius:100px;border:1px solid var(--line);
+  background:var(--surface);font-size:0.85rem;font-weight:500;color:var(--ink-soft);white-space:nowrap;
+  transition:all .15s;
+}
+.chip:hover{border-color:var(--teal);color:var(--ink);}
+.chip.active{background:var(--navy);border-color:var(--navy);color:#fff;}
+
+.shop-layout{display:grid;grid-template-columns:220px 1fr;gap:32px;align-items:flex-start;}
+.sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:4px;}
+.sidebar-title{font-family:'IBM Plex Mono';font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-soft);margin-bottom:10px;}
+.sidebar button{
+  text-align:left;background:none;border:none;padding:9px 12px;border-radius:8px;font-size:0.9rem;
+  color:var(--ink-soft);font-weight:500;display:flex;justify-content:space-between;
+}
+.sidebar button:hover{background:var(--surface);color:var(--ink);}
+.sidebar button.active{background:var(--teal-dim);color:var(--navy);font-weight:600;}
+.sidebar button .n{font-family:'IBM Plex Mono';font-size:0.75rem;color:var(--ink-soft);}
+@media(max-width:900px){
+  .sidebar{display:none;}
+  .shop-layout{grid-template-columns:1fr;}
+}
+
+.product-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+}
+@media(max-width:1100px){.product-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:700px){.product-grid{grid-template-columns:repeat(2,1fr);gap:12px;}}
+
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  display:flex;flex-direction:column;transition:box-shadow .2s, transform .2s, border-color .2s;position:relative;
+}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:#CFE0EC;}
+.card-media{position:relative;aspect-ratio:4/3;background:var(--navy);cursor:pointer;overflow:hidden;}
+.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
+.card:hover .card-media img{transform:scale(1.06);}
+.stock-badge{
+  position:absolute;top:10px;left:10px;font-family:'IBM Plex Mono';font-size:0.68rem;font-weight:600;
+  padding:4px 9px;border-radius:6px;letter-spacing:0.02em;
+}
+.stock-badge.in{background:#0FBE8F;color:#fff;}
+.stock-badge.out{background:#8A94A6;color:#fff;}
+.quote-add{
+  position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;border:none;
+  background:rgba(255,255,255,0.92);color:var(--navy);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+.quote-add svg{width:16px;height:16px;}
+.quote-add.added{background:var(--teal);color:#fff;}
+.card-body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:6px;flex:1;}
+.card-cat{font-family:'IBM Plex Mono';font-size:0.68rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--teal);}
+.card-name{font-size:0.95rem;font-weight:600;line-height:1.3;cursor:pointer;}
+.card-spec{font-size:0.8rem;color:var(--ink-soft);line-height:1.4;flex:1;}
+.card-price{font-family:'IBM Plex Mono';font-weight:600;font-size:1.05rem;margin-top:4px;}
+.card-price span{font-size:0.7rem;color:var(--ink-soft);font-weight:500;margin-left:2px;}
+.card-buy{
+  margin-top:8px;display:flex;align-items:center;justify-content:center;gap:7px;
+  background:var(--whatsapp);color:#fff;padding:10px;border-radius:9px;border:none;font-weight:600;font-size:0.82rem;
+}
+.card-buy:hover{background:#1FB855;}
+.card-buy svg{width:16px;height:16px;}
+.card-buy:disabled{background:#C6CCD5;cursor:not-allowed;}
+
+.no-results{
+  grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--ink-soft);
+}
+.no-results svg{width:44px;height:44px;color:var(--line);margin-bottom:12px;}
+.no-results strong{display:block;color:var(--ink);font-size:1.05rem;margin-bottom:4px;}
+
+/* ===== About ===== */
+.about{background:var(--navy);color:#fff;padding:64px 0;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.about h2{font-size:1.8rem;margin-bottom:16px;}
+.about p{color:#C6D6E4;line-height:1.7;font-size:0.98rem;}
+.about-icons{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.about-icon-item{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px;}
+.about-icon-item .icon{width:34px;height:34px;color:var(--teal);margin-bottom:10px;}
+.about-icon-item strong{display:block;font-size:0.9rem;margin-bottom:3px;}
+.about-icon-item span{font-size:0.78rem;color:#AEC2D3;}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;}}
+
+/* ===== Footer ===== */
+footer{background:#081C30;color:#B9C9D6;padding:56px 0 24px;}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:36px;}
+.footer-col h4{color:#fff;font-size:0.95rem;margin-bottom:16px;font-family:'Space Grotesk';}
+.footer-col p, .footer-col li, .footer-col a{font-size:0.85rem;line-height:1.9;color:#B9C9D6;}
+.footer-col ul{list-style:none;padding:0;margin:0;}
+.footer-col a:hover{color:var(--teal);}
+.footer-contact-item{display:flex;gap:9px;margin-bottom:10px;align-items:flex-start;}
+.footer-contact-item svg{width:16px;height:16px;flex-shrink:0;margin-top:2px;color:var(--teal);}
+.social-row{display:flex;gap:10px;margin-top:14px;}
+.social-row a{
+  width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,0.06);
+  display:flex;align-items:center;justify-content:center;
+}
+.social-row a:hover{background:var(--teal);}
+.social-row svg{width:16px;height:16px;}
+.map-embed{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);margin-top:12px;}
+.map-embed iframe{width:100%;height:150px;border:0;display:block;}
+.contact-form{display:flex;flex-direction:column;gap:9px;}
+.contact-form input,.contact-form textarea{
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:8px;
+  padding:10px 12px;color:#fff;font-size:0.85rem;font-family:inherit;
+}
+.contact-form textarea{resize:vertical;min-height:64px;}
+.contact-form ::placeholder{color:#7C8FA0;}
+.contact-form button{
+  background:var(--amber);color:var(--navy);border:none;padding:10px;border-radius:8px;font-weight:700;font-size:0.85rem;
+}
+.contact-form button:hover{background:var(--amber-dark);}
+.form-note{font-size:0.76rem;color:#7C8FA0;}
+.footer-bottom{
+  max-width:1240px;margin:40px auto 0;padding:20px 24px 0;border-top:1px solid rgba(255,255,255,0.08);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:0.78rem;color:#7C8FA0;
+}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+
+/* ===== Floating WhatsApp ===== */
+.float-whatsapp{
+  position:fixed;bottom:22px;right:22px;z-index:90;background:var(--whatsapp);color:#fff;
+  width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 24px rgba(37,211,102,0.45);border:none;
+}
+.float-whatsapp svg{width:28px;height:28px;}
+.float-whatsapp:hover{transform:scale(1.06);}
+
+/* ===== Modal ===== */
+.overlay{
+  position:fixed;inset:0;background:rgba(8,20,33,0.6);backdrop-filter:blur(2px);z-index:200;
+  display:none;align-items:center;justify-content:center;padding:20px;
+}
+.overlay.open{display:flex;}
+.modal{
+  background:var(--surface);border-radius:16px;max-width:880px;width:100%;max-height:88vh;overflow-y:auto;
+  display:grid;grid-template-columns:1fr 1fr;box-shadow:var(--shadow-lg);position:relative;
+}
+.modal-close{
+  position:absolute;top:14px;right:14px;background:var(--surface);border:1px solid var(--line);
+  width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;
+}
+.modal-media{background:var(--navy);}
+.modal-media img{width:100%;height:100%;object-fit:cover;min-height:260px;}
+.modal-body{padding:28px;display:flex;flex-direction:column;gap:12px;}
+.modal-body .card-cat{font-size:0.72rem;}
+.modal-body h3{font-size:1.3rem;}
+.modal-desc{color:var(--ink-soft);font-size:0.9rem;line-height:1.65;}
+.modal-price{font-family:'IBM Plex Mono';font-size:1.5rem;font-weight:600;}
+.qty-row{display:flex;align-items:center;gap:12px;margin-top:6px;}
+.qty-control{display:flex;align-items:center;border:1px solid var(--line);border-radius:9px;overflow:hidden;}
+.qty-control button{background:var(--bg);border:none;width:34px;height:34px;font-size:1.1rem;}
+.qty-control span{width:38px;text-align:center;font-family:'IBM Plex Mono';font-weight:600;}
+.modal-actions{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+.related-title{font-family:'IBM Plex Mono';font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink-soft);margin-top:14px;}
+.related-row{display:flex;gap:10px;overflow-x:auto;padding-top:8px;}
+.related-item{flex-shrink:0;width:110px;cursor:pointer;}
+.related-item img{border-radius:8px;aspect-ratio:1;object-fit:cover;}
+.related-item span{display:block;font-size:0.72rem;margin-top:5px;color:var(--ink-soft);line-height:1.3;}
+@media(max-width:700px){.modal{grid-template-columns:1fr;}.modal-media img{min-height:180px;}}
+
+/* ===== Quote drawer ===== */
+.drawer-overlay{position:fixed;inset:0;background:rgba(8,20,33,0.5);z-index:200;display:none;}
+.drawer-overlay.open{display:block;}
+.drawer{
+  position:fixed;top:0;right:0;height:100%;width:380px;max-width:92vw;background:var(--surface);z-index:201;
+  transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column;box-shadow:var(--shadow-lg);
+}
+.drawer.open{transform:translateX(0);}
+.drawer-head{padding:20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;}
+.drawer-head h3{font-size:1.05rem;}
+.drawer-items{flex:1;overflow-y:auto;padding:12px 20px;}
+.drawer-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);}
+.drawer-item img{width:56px;height:56px;border-radius:8px;object-fit:cover;flex-shrink:0;}
+.drawer-item-info{flex:1;}
+.drawer-item-info strong{font-size:0.85rem;display:block;}
+.drawer-item-info .mono{font-size:0.8rem;color:var(--ink-soft);}
+.drawer-item button{background:none;border:none;color:#C0392B;font-size:0.78rem;}
+.drawer-empty{padding:40px 20px;text-align:center;color:var(--ink-soft);font-size:0.88rem;}
+.drawer-foot{padding:18px 20px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:10px;}
+.drawer-foot .total{display:flex;justify-content:space-between;font-weight:600;font-family:'IBM Plex Mono';}
+
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#home" class="logo" aria-label="PHOTON Electronics home">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="#FF9500" stroke="#FF9500" stroke-width="1"/></svg>
+      <span class="logo-text">PHOTON<span> ELECTRONICS</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#shop">Categories</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-search">
+      <input id="searchInput" type="text" placeholder="Search products — e.g. MCB, LED bulb, cable...">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" id="quoteBtn" aria-label="Open quote list">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="badge" id="quoteBadge">0</span>
+      </button>
+      <button class="icon-btn hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <div class="container">
+      <div class="mobile-search">
+        <input id="searchInputMobile" type="text" placeholder="Search products...">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </div>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#shop">Categories</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <svg class="hero-trace" viewBox="0 0 1240 460" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-50 380 L200 380 L240 340 L500 340 L540 300 L900 300 L940 260 L1300 260" stroke="#0FBE8F" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M-50 80 L150 80 L190 120 L420 120 L460 160 L760 160 L800 200 L1300 200" stroke="#0FBE8F" stroke-width="1.5" fill="none" opacity="0.35"/>
+    <circle r="4" fill="#FF9500"><animateMotion dur="6s" repeatCount="indefinite" path="M-50 380 L200 380 L240 340 L500 340 L540 300 L900 300 L940 260 L1300 260"/></circle>
+    <circle r="3" fill="#0FBE8F"><animateMotion dur="8s" repeatCount="indefinite" path="M-50 80 L150 80 L190 120 L420 120 L460 160 L760 160 L800 200 L1300 200"/></circle>
+  </svg>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow"><span class="dot"></span> Utawala, Nairobi · Same-day local delivery</div>
+      <h1>Quality Electrical &amp; <em>Electronics Supplies</em>,<br>sourced right for Nairobi.</h1>
+      <p>From switches and cables to solar inverters and power tools — genuine parts, fair prices, and a technician on WhatsApp when you need one.</p>
+      <div class="hero-ctas">
+        <a href="#shop" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          Shop Now
+        </a>
+        <a href="https://wa.me/254712132852?text=Hi%20PHOTON%20Electronics%2C%20I%27d%20like%20some%20help%20finding%20a%20product." target="_blank" rel="noopener" class="btn btn-ghost">Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-carousel" id="heroCarousel">
+      <div class="hero-slide active" style="background-image:url('https://placehold.co/700x520/0A2540/FFFFFF?font=roboto&text=Solar+%26+Inverters')">
+        <span class="hero-slide-tag">This week</span>
+        <div class="hero-slide-caption"><strong>Solar & Inverter Kits</strong><span>Keep the lights on through blackouts — from KES 8,500</span></div>
+      </div>
+      <div class="hero-slide" style="background-image:url('https://placehold.co/700x520/123A5E/FFFFFF?font=roboto&text=LED+Lighting')">
+        <span class="hero-slide-tag">New stock</span>
+        <div class="hero-slide-caption"><strong>LED Lighting Range</strong><span>Bright, efficient bulbs and fittings for home & office</span></div>
+      </div>
+      <div class="hero-slide" style="background-image:url('https://placehold.co/700x520/0E2F4D/FFFFFF?font=roboto&text=Power+Tools')">
+        <span class="hero-slide-tag">Trending</span>
+        <div class="hero-slide-caption"><strong>Power Tools & Accessories</strong><span>Drills, grinders and more for the job site</span></div>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </div>
+</section>
+
+<svg class="circuit-divider" viewBox="0 0 1240 46" preserveAspectRatio="none">
+  <path class="wire" d="M0 23 H520 L545 8 H700 L725 38 H1240"/>
+  <circle class="node" cx="520" cy="23" r="4"/>
+  <circle class="node" cx="725" cy="38" r="4"/>
+</svg>
+
+<!-- ===== Trust strip ===== -->
+<section class="trust-strip">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <div><strong>Genuine products</strong><span>Sourced from trusted brands</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="15" height="12" rx="2"/><path d="M16 10h4l3 3v5h-7z"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="20" r="2"/></svg></div>
+      <div><strong>Fast delivery</strong><span>Same-day across Nairobi</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><path d="M21 12c0 4.97-3.5 9-9 9s-9-4.03-9-9 3.5-9 9-9c1.5 0 2.9.36 4.14 1"/></svg></div>
+      <div><strong>Warranty included</strong><span>On select tools & electronics</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+      <div><strong>M-Pesa accepted</strong><span>Pay easily, no cash needed</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Shop ===== -->
+<section class="shop container" id="shop">
+  <div class="shop-head">
+    <h2>Shop all products</h2>
+    <span class="count mono" id="resultCount">— items</span>
+  </div>
+
+  <div class="chip-row" id="chipRow"></div>
+
+  <div class="shop-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-title">Categories</div>
+    </aside>
+    <div>
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="about">
+  <div class="container about-grid">
+    <div>
+      <h2>Your trusted electrical shop in Utawala</h2>
+      <p>PHOTON Electronics has been supplying homes, contractors and small businesses across Nairobi with genuine electrical and electronics products. Based in Utawala, we stock everything from everyday switches and cables to solar backup systems — and we're on WhatsApp when you need quick advice on what to buy.</p>
+      <p style="margin-top:12px;">Walk in, call, or message us — we'll have your order ready or delivered the same day.</p>
+    </div>
+    <div class="about-icons">
+      <div class="about-icon-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/></svg>
+        <strong>Genuine products</strong><span>No counterfeits, ever</span>
+      </div>
+      <div class="about-icon-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="15" height="12" rx="2"/><path d="M16 10h4l3 3v5h-7z"/></svg>
+        <strong>Fast Nairobi delivery</strong><span>Same day in most areas</span>
+      </div>
+      <div class="about-icon-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><path d="M21 12c0 4.97-3.5 9-9 9s-9-4.03-9-9 3.5-9 9-9c1.5 0 2.9.36 4.14 1"/></svg>
+        <strong>Warranty on select items</strong><span>Ask us before you buy</span>
+      </div>
+      <div class="about-icon-item">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        <strong>M-Pesa payment</strong><span>Buy Goods & Till available</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer id="contact">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4>PHOTON Electronics</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Utawala, Nairobi, Kenya</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"/></svg>
+        <span>0712 132 852 (call & WhatsApp)</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+        <span>photonelectronics01@gmail.com</span>
+      </div>
+      <div class="social-row">
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul id="footerCatList"></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Opening hours</h4>
+      <ul>
+        <li>Mon – Fri: 8:00am – 7:00pm</li>
+        <li>Saturday: 8:30am – 6:00pm</li>
+        <li>Sunday: 10:00am – 4:00pm</li>
+      </ul>
+      <h4 style="margin-top:18px;">Find us</h4>
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps?q=Utawala,Nairobi,Kenya&output=embed" loading="lazy" title="PHOTON Electronics location map"></iframe>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Ask us a question</h4>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your name" required id="cfName">
+        <input type="tel" placeholder="Phone number" required id="cfPhone">
+        <textarea placeholder="What are you looking for?" required id="cfMsg"></textarea>
+        <button type="submit">Send message</button>
+        <span class="form-note" id="cfNote">We'll reply on WhatsApp or by phone — usually within the hour.</span>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> PHOTON Electronics. All rights reserved.</span>
+    <span>Utawala, Nairobi · 0712 132 852</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/254712132852?text=Hi%20PHOTON%20Electronics%2C%20I%20have%20a%20question." target="_blank" rel="noopener" class="float-whatsapp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A8.9 8.9 0 0 0 12.05 3.7 8.9 8.9 0 0 0 3.1 12.5c0 1.55.4 3.05 1.16 4.38L3 21l4.25-1.24a8.9 8.9 0 0 0 4.8 1.4h.01a8.9 8.9 0 0 0 8.9-8.9 8.86 8.86 0 0 0-2.36-5.96Zm-5.55 13.68h-.01a7.4 7.4 0 0 1-3.76-1.03l-.27-.16-2.79.81.75-2.72-.18-.28a7.38 7.38 0 0 1-1.14-3.94 7.4 7.4 0 0 1 7.4-7.4 7.35 7.35 0 0 1 5.24 2.17 7.35 7.35 0 0 1 2.17 5.24 7.4 7.4 0 0 1-7.41 7.31Zm4.06-5.54c-.22-.11-1.32-.65-1.52-.73-.2-.07-.35-.11-.5.11-.15.22-.58.73-.71.88-.13.15-.26.16-.48.05-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.31-1.24-1.53-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.07-.11-.5-1.21-.69-1.65-.18-.44-.36-.38-.5-.38-.13 0-.28-.02-.43-.02-.15 0-.39.06-.6.28-.2.22-.79.77-.79 1.87 0 1.1.81 2.17.92 2.32.11.15 1.6 2.45 3.89 3.43.54.23.97.37 1.3.48.55.17 1.04.15 1.44.09.44-.07 1.32-.54 1.5-1.06.19-.52.19-.96.13-1.06-.05-.09-.2-.15-.42-.26Z"/></svg>
+</a>
+
+<!-- ===== Product Modal ===== -->
+<div class="overlay" id="productOverlay" role="dialog" aria-modal="true">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<!-- ===== Quote Drawer ===== -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>Your quote list</h3>
+    <button class="icon-btn" id="drawerClose" style="color:var(--ink);" aria-label="Close quote list">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot" id="drawerFoot" style="display:none;">
+    <div class="total"><span>Estimated total</span><span class="mono" id="drawerTotal">KES 0</span></div>
+    <a href="#" target="_blank" rel="noopener" class="btn btn-whatsapp" id="drawerWhatsapp" style="justify-content:center;">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A8.9 8.9 0 0 0 12.05 3.7 8.9 8.9 0 0 0 3.1 12.5c0 1.55.4 3.05 1.16 4.38L3 21l4.25-1.24a8.9 8.9 0 0 0 4.8 1.4h.01a8.9 8.9 0 0 0 8.9-8.9 8.86 8.86 0 0 0-2.36-5.96Z"/></svg>
+      Send quote via WhatsApp
+    </a>
+  </div>
+</aside>
+
+<script>
+/* ===================== DATA ===================== */
+const SHOP_PHONE = "254712132852";
+const CATEGORIES = [
+  "Cables & Wiring",
+  "Switches & Sockets",
+  "Circuit Breakers & Distribution",
+  "Lighting & LED",
+  "Solar & Inverters",
+  "Power Tools",
+  "Home Appliances",
+  "Security & CCTV",
+  "Phone & Electronics Accessories"
+];
+
+const COLORS = { "Cables & Wiring":"0A2540","Switches & Sockets":"123A5E","Circuit Breakers & Distribution":"0E2F4D","Lighting & LED":"0FBE8F","Solar & Inverters":"FF9500","Power Tools":"1A344F","Home Appliances":"0A2540","Security & CCTV":"123A5E","Phone & Electronics Accessories":"0E2F4D" };
+
+function img(cat, label){
+  const bg = COLORS[cat] || "0A2540";
+  return `https://placehold.co/500x400/${bg}/FFFFFF?font=roboto&text=${encodeURIComponent(label)}`;
+}
+
+/* ===================== SUPABASE CONNECTION ===================== */
+// Paste your project values from Supabase → Project Settings → API
+const SUPABASE_URL = "https://rhkjqhrdzwfsgnelpwtx.supabase.co";       // e.g. https://abcdefgh.supabase.co
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJoa2pxaHJkendmc2duZWxwd3R4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU5NTcxMzksImV4cCI6MjEwMTUzMzEzOX0.67rVMIrdzk_TuJXrQRfrOsnVRWTJxLNOHiKfj4w1phQ"; // the "anon public" key — safe to expose in frontend code
+
+let PRODUCTS = [];
+
+async function loadProducts(){
+  const notConfigured = SUPABASE_URL.startsWith("YOUR_") || SUPABASE_ANON_KEY.startsWith("YOUR_");
+  if(notConfigured){
+    console.warn("Supabase not configured yet — showing offline sample data.");
+    PRODUCTS = FALLBACK_PRODUCTS.map(p => ({...p, img: img(p.cat, p.name.split(" ").slice(0,3).join(" "))}));
+    return;
+  }
+  try{
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/products?select=*&order=id.asc`, {
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`
+      }
+    });
+    if(!res.ok) throw new Error("Supabase request failed: " + res.status);
+    const data = await res.json();
+    PRODUCTS = data.map(p => ({
+      id: p.id,
+      name: p.name,
+      cat: p.category,
+      price: Number(p.price),
+      spec: p.spec,
+      desc: p.description,
+      stock: p.in_stock,
+      img: p.image_url || img(p.category, p.name.split(" ").slice(0,3).join(" "))
+    }));
+  } catch(err){
+    console.error("Could not load products from Supabase, showing offline sample data.", err);
+    PRODUCTS = FALLBACK_PRODUCTS.map(p => ({...p, img: img(p.cat, p.name.split(" ").slice(0,3).join(" "))}));
+  }
+}
+
+/* Offline fallback — used only if Supabase isn't configured yet or a request fails,
+   so the site never shows a blank page. Once Supabase is connected, this is unused. */
+const FALLBACK_PRODUCTS = [
+  {id:1, name:"2.5mm² Twin & Earth Cable (100m roll)", cat:"Cables & Wiring", price:6800, spec:"Copper conductor, PVC insulated, 100m", stock:true, desc:"Heavy-duty 2.5mm² twin & earth cable for general household wiring circuits. Copper core with PVC insulation for durability and safety."},
+  {id:2, name:"1.5mm² Single Core Cable (per meter)", cat:"Cables & Wiring", price:45, spec:"Copper, 1.5mm², sold per metre", stock:true, desc:"Flexible single-core copper cable, ideal for lighting circuits and general wiring. Sold per metre — tell us how many you need."},
+  {id:3, name:"4mm² Armoured Cable (per meter)", cat:"Cables & Wiring", price:220, spec:"SWA armoured, outdoor rated", stock:true, desc:"Steel wire armoured cable rated for underground and outdoor use, protecting against mechanical damage."},
+  {id:4, name:"13A 2-Gang Switched Socket", cat:"Switches & Sockets", price:450, spec:"Double pole, white finish, with neon indicator", stock:true, desc:"Reliable 13A double switched socket for everyday appliances, with safety shutter and neon power indicator."},
+  {id:5, name:"1-Gang 2-Way Light Switch", cat:"Switches & Sockets", price:280, spec:"White moulded, screwless finish", stock:true, desc:"Control a single light from two points — perfect for staircases and long corridors."},
+  {id:6, name:"45A Cooker Control Unit", cat:"Switches & Sockets", price:1350, spec:"Double pole + 13A switched socket, with neon", stock:false, desc:"All-in-one cooker isolation switch with an integrated 13A socket for kitchen appliances."},
+  {id:7, name:"32A Single Pole MCB", cat:"Circuit Breakers & Distribution", price:650, spec:"6kA breaking capacity, 240V", stock:true, desc:"Miniature circuit breaker rated 32A for protecting general household circuits from overload."},
+  {id:8, name:"12-Way Distribution Board", cat:"Circuit Breakers & Distribution", price:4200, spec:"Metal enclosure, 12-way, incomer included", stock:true, desc:"Consumer unit with 12 ways for organising and protecting household or small commercial circuits."},
+  {id:9, name:"63A Isolator Switch", cat:"Circuit Breakers & Distribution", price:1450, spec:"Double pole, IP65 weatherproof", stock:true, desc:"Weatherproof double-pole isolator for safely disconnecting power to outdoor units and solar systems."},
+  {id:10, name:"9W LED Bulb (Pack of 4)", cat:"Lighting & LED", price:900, spec:"B22/E27, 6500K daylight, 50,000hr life", stock:true, desc:"Energy-saving LED bulbs with bright daylight output. Long-rated lifespan means fewer replacements."},
+  {id:11, name:"18W LED Ceiling Panel", cat:"Lighting & LED", price:1350, spec:"Round, surface mount, 6500K", stock:true, desc:"Slim LED ceiling panel for offices, shops and living rooms — even, glare-free light."},
+  {id:12, name:"Solar Flood Light 100W", cat:"Lighting & LED", price:3200, spec:"Motion sensor, remote control, IP66", stock:true, desc:"Standalone solar-powered floodlight with built-in panel, motion sensor and remote — ideal for compounds and gates."},
+  {id:13, name:"1000VA Inverter + Battery Kit", cat:"Solar & Inverters", price:24500, spec:"Pure sine wave, includes 100Ah battery", stock:true, desc:"Keep lights, TV and Wi-Fi running through blackouts. Complete kit with inverter and deep-cycle battery."},
+  {id:14, name:"200W Solar Panel (Monocrystalline)", cat:"Solar & Inverters", price:11500, spec:"12V, monocrystalline, 10-year warranty", stock:true, desc:"High-efficiency monocrystalline panel suitable for home solar and backup power setups."},
+  {id:15, name:"MPPT Solar Charge Controller 40A", cat:"Solar & Inverters", price:5400, spec:"12V/24V auto, LCD display", stock:false, desc:"Maximises charging efficiency between your solar panel and battery bank, with a clear LCD status display."},
+  {id:16, name:"Cordless Drill Driver 18V", cat:"Power Tools", price:5200, spec:"Includes battery, charger & bit set", stock:true, desc:"Versatile cordless drill for household and light contractor work, supplied with battery and charger."},
+  {id:17, name:"Angle Grinder 4.5-inch", cat:"Power Tools", price:3400, spec:"850W, includes cutting disc", stock:true, desc:"Reliable angle grinder for cutting and grinding metal, tiles and more — includes a starter disc."},
+  {id:18, name:"Digital Multimeter", cat:"Power Tools", price:1200, spec:"AC/DC voltage, current & continuity test", stock:true, desc:"Essential tester for electricians — measures voltage, current, resistance and continuity."},
+  {id:19, name:"Standing Fan 18-inch", cat:"Home Appliances", price:3800, spec:"3-speed, oscillating, remote control", stock:true, desc:"Powerful oscillating stand fan with 3 speed settings and remote control for whole-room cooling."},
+  {id:20, name:"Electric Kettle 1.7L", cat:"Home Appliances", price:1650, spec:"1800W, auto shut-off, cordless base", stock:true, desc:"Fast-boiling cordless kettle with automatic shut-off for safe, everyday use."},
+  {id:21, name:"1.5HP Split Air Conditioner", cat:"Home Appliances", price:52000, spec:"Cooling only, includes installation kit", stock:false, desc:"Efficient split-unit AC for bedrooms and offices. Installation accessories included; fitting arranged on request."},
+  {id:22, name:"4-Channel CCTV Kit (1080p)", cat:"Security & CCTV", price:16500, spec:"4 cameras, DVR, 1TB hard drive, night vision", stock:true, desc:"Complete home/business surveillance kit — 4 night-vision cameras, DVR recorder and 1TB storage."},
+  {id:23, name:"WiFi Smart Door Lock", cat:"Security & CCTV", price:8900, spec:"App control, fingerprint + PIN + key", stock:true, desc:"Modern smart lock with fingerprint, PIN code, key and remote app access via WiFi."},
+  {id:24, name:"Solar Motion Sensor Camera", cat:"Security & CCTV", price:4600, spec:"1080p, solar powered, app alerts", stock:true, desc:"Wire-free solar security camera that sends motion alerts straight to your phone."},
+  {id:25, name:"Universal Fast Charger (65W)", cat:"Phone & Electronics Accessories", price:1800, spec:"USB-C PD, multi-device compatible", stock:true, desc:"Fast-charging USB-C wall charger compatible with phones, tablets and laptops."},
+  {id:26, name:"6-Way Extension Cable with Surge Protection", cat:"Phone & Electronics Accessories", price:1100, spec:"2m cord, surge protected, individual switches", stock:true, desc:"Extension block with 6 switched sockets and surge protection to keep your devices safe."},
+  {id:27, name:"Bluetooth Speaker (Portable)", cat:"Phone & Electronics Accessories", price:2400, spec:"10W, 8hr battery, water resistant", stock:true, desc:"Compact portable speaker with punchy sound, long battery life and splash resistance."},
+  {id:28, name:"Voltage Stabilizer / TV Guard", cat:"Phone & Electronics Accessories", price:1450, spec:"13A, surge & spike protection", stock:true, desc:"Protects TVs and sensitive electronics from Kenya's power surges and voltage fluctuations."}
+];
+
+/* ===================== STATE ===================== */
+let activeCategory = "All";
+let searchTerm = "";
+let quoteList = []; // {id, qty}
+
+/* ===================== RENDER: chips / sidebar / footer links ===================== */
+const chipRow = document.getElementById('chipRow');
+const sidebar = document.getElementById('sidebar');
+const footerCatList = document.getElementById('footerCatList');
+
+function countFor(cat){
+  return cat === "All" ? PRODUCTS.length : PRODUCTS.filter(p=>p.cat===cat).length;
+}
+
+function buildFilters(){
+  const all = ["All", ...CATEGORIES];
+  chipRow.innerHTML = all.map(cat =>
+    `<button class="chip ${cat===activeCategory?'active':''}" data-cat="${cat}">${cat}</button>`
+  ).join('');
+
+  sidebar.innerHTML = '<div class="sidebar-title">Categories</div>' + all.map(cat =>
+    `<button class="${cat===activeCategory?'active':''}" data-cat="${cat}"><span>${cat}</span><span class="n mono">${countFor(cat)}</span></button>`
+  ).join('');
+
+  footerCatList.innerHTML = CATEGORIES.map(cat => `<li><a href="#shop" data-cat="${cat}">${cat}</a></li>`).join('');
+
+  document.querySelectorAll('[data-cat]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      activeCategory = el.getAttribute('data-cat');
+      buildFilters();
+      renderGrid();
+      document.getElementById('shop').scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+}
+
+/* ===================== RENDER: product grid ===================== */
+const grid = document.getElementById('productGrid');
+const resultCount = document.getElementById('resultCount');
+
+function filteredProducts(){
+  return PRODUCTS.filter(p => {
+    const matchesCat = activeCategory === "All" || p.cat === activeCategory;
+    const matchesSearch = !searchTerm || p.name.toLowerCase().includes(searchTerm) || p.spec.toLowerCase().includes(searchTerm) || p.cat.toLowerCase().includes(searchTerm);
+    return matchesCat && matchesSearch;
+  });
+}
+
+function whatsappLink(product, qty){
+  qty = qty || 1;
+  const msg = `Hi PHOTON Electronics, I'm interested in ${product.name} (KES ${product.price.toLocaleString()}) x${qty}. Is it available?`;
+  return `https://wa.me/${SHOP_PHONE}?text=${encodeURIComponent(msg)}`;
+}
+
+function renderGrid(){
+  const list = filteredProducts();
+  resultCount.textContent = `${list.length} item${list.length!==1?'s':''}`;
+
+  if(list.length === 0){
+    grid.innerHTML = `<div class="no-results">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <strong>No products found</strong>try another search or category
+    </div>`;
+    return;
+  }
+
+  grid.innerHTML = list.map(p => `
+    <div class="card" data-id="${p.id}">
+      <div class="card-media" data-open="${p.id}">
+        <img src="${p.img}" alt="${p.name}" loading="lazy">
+        <span class="stock-badge ${p.stock?'in':'out'}">${p.stock?'In Stock':'Out of Stock'}</span>
+        <button class="quote-add ${quoteList.some(q=>q.id===p.id)?'added':''}" data-quote="${p.id}" aria-label="Add to quote list">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+      </div>
+      <div class="card-body">
+        <span class="card-cat">${p.cat}</span>
+        <span class="card-name" data-open="${p.id}">${p.name}</span>
+        <span class="card-spec">${p.spec}</span>
+        <span class="card-price">KES ${p.price.toLocaleString()}<span>/unit</span></span>
+        <a class="card-buy" ${p.stock?`href="${whatsappLink(p,1)}" target="_blank" rel="noopener"`:'aria-disabled="true"'} ${!p.stock?'style="pointer-events:none;background:#C6CCD5;"':''}>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A8.9 8.9 0 0 0 12.05 3.7 8.9 8.9 0 0 0 3.1 12.5c0 1.55.4 3.05 1.16 4.38L3 21l4.25-1.24a8.9 8.9 0 0 0 4.8 1.4h.01a8.9 8.9 0 0 0 8.9-8.9 8.86 8.86 0 0 0-2.36-5.96Z"/></svg>
+          ${p.stock ? 'Buy via WhatsApp' : 'Currently unavailable'}
+        </a>
+      </div>
+    </div>
+  `).join('');
+
+  grid.querySelectorAll('[data-open]').forEach(el => el.addEventListener('click', () => openModal(parseInt(el.getAttribute('data-open')))));
+  grid.querySelectorAll('[data-quote]').forEach(el => el.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleQuote(parseInt(el.getAttribute('data-quote')));
+  }));
+}
+
+/* ===================== SEARCH ===================== */
+function bindSearch(input){
+  input.addEventListener('input', () => {
+    searchTerm = input.value.trim().toLowerCase();
+    [document.getElementById('searchInput'), document.getElementById('searchInputMobile')].forEach(i=>{ if(i!==input) i.value = input.value; });
+    renderGrid();
+  });
+}
+bindSearch(document.getElementById('searchInput'));
+bindSearch(document.getElementById('searchInputMobile'));
+
+/* ===================== MOBILE MENU ===================== */
+const mobilePanel = document.getElementById('mobilePanel');
+document.getElementById('hamburgerBtn').addEventListener('click', () => mobilePanel.classList.toggle('open'));
+mobilePanel.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>mobilePanel.classList.remove('open')));
+
+/* ===================== HERO CAROUSEL ===================== */
+const slides = document.querySelectorAll('.hero-slide');
+const dotsWrap = document.getElementById('carouselDots');
+let slideIndex = 0;
+slides.forEach((_,i) => {
+  const b = document.createElement('button');
+  if(i===0) b.classList.add('active');
+  b.addEventListener('click', ()=> setSlide(i));
+  dotsWrap.appendChild(b);
+});
+function setSlide(i){
+  slides[slideIndex].classList.remove('active');
+  dotsWrap.children[slideIndex].classList.remove('active');
+  slideIndex = i;
+  slides[slideIndex].classList.add('active');
+  dotsWrap.children[slideIndex].classList.add('active');
+}
+setInterval(()=> setSlide((slideIndex+1)%slides.length), 4500);
+
+/* ===================== PRODUCT MODAL ===================== */
+const overlay = document.getElementById('productOverlay');
+const modalContent = document.getElementById('modalContent');
+let modalQty = 1;
+
+function openModal(id){
+  const p = PRODUCTS.find(x=>x.id===id);
+  if(!p) return;
+  modalQty = 1;
+  const related = PRODUCTS.filter(x=>x.cat===p.cat && x.id!==p.id).slice(0,4);
+
+  modalContent.innerHTML = `
+    <button class="modal-close" id="modalCloseBtn" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal-media"><img src="${p.img}" alt="${p.name}"></div>
+    <div class="modal-body">
+      <span class="card-cat">${p.cat}</span>
+      <h3>${p.name}</h3>
+      <span class="stock-badge ${p.stock?'in':'out'}" style="position:static;display:inline-block;width:fit-content;">${p.stock?'In Stock':'Out of Stock'}</span>
+      <p class="modal-desc">${p.desc}</p>
+      <div class="modal-price">KES ${p.price.toLocaleString()}</div>
+      <div class="qty-row">
+        <div class="qty-control">
+          <button id="qtyMinus" aria-label="Decrease quantity">−</button>
+          <span id="qtyVal">1</span>
+          <button id="qtyPlus" aria-label="Increase quantity">+</button>
+        </div>
+        <span class="mono" style="font-size:0.85rem;color:var(--ink-soft);">Subtotal: <span id="qtySubtotal">KES ${p.price.toLocaleString()}</span></span>
+      </div>
+      <div class="modal-actions">
+        <a href="${whatsappLink(p,1)}" target="_blank" rel="noopener" class="btn btn-whatsapp" id="modalWhatsapp" ${!p.stock?'style="background:#C6CCD5;pointer-events:none;"':''}>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A8.9 8.9 0 0 0 12.05 3.7 8.9 8.9 0 0 0 3.1 12.5c0 1.55.4 3.05 1.16 4.38L3 21l4.25-1.24a8.9 8.9 0 0 0 4.8 1.4h.01a8.9 8.9 0 0 0 8.9-8.9 8.86 8.86 0 0 0-2.36-5.96Z"/></svg>
+          Buy via WhatsApp
+        </a>
+        <button class="btn btn-ghost" style="color:var(--ink);border-color:var(--line);background:var(--bg);" id="modalQuoteBtn">${quoteList.some(q=>q.id===p.id)?'Added to quote ✓':'Add to quote list'}</button>
+      </div>
+      ${related.length ? `<div class="related-title">You may also need</div>
+      <div class="related-row">
+        ${related.map(r=>`<div class="related-item" data-open="${r.id}"><img src="${r.img}" alt="${r.name}"><span>${r.name}</span></div>`).join('')}
+      </div>` : ''}
+    </div>
+  `;
+
+  overlay.classList.add('open');
+  document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+  document.getElementById('qtyPlus').addEventListener('click', ()=> updateQty(p, 1));
+  document.getElementById('qtyMinus').addEventListener('click', ()=> updateQty(p, -1));
+  document.getElementById('modalQuoteBtn').addEventListener('click', ()=>{ toggleQuote(p.id); openModal(p.id); });
+  modalContent.querySelectorAll('[data-open]').forEach(el => el.addEventListener('click', ()=> openModal(parseInt(el.getAttribute('data-open')))));
+}
+
+function updateQty(p, delta){
+  modalQty = Math.max(1, modalQty + delta);
+  document.getElementById('qtyVal').textContent = modalQty;
+  document.getElementById('qtySubtotal').textContent = `KES ${(p.price*modalQty).toLocaleString()}`;
+  document.getElementById('modalWhatsapp').href = whatsappLink(p, modalQty);
+}
+
+function closeModal(){ overlay.classList.remove('open'); }
+overlay.addEventListener('click', (e)=>{ if(e.target===overlay) closeModal(); });
+document.addEventListener('keydown', (e)=>{ if(e.key==='Escape'){ closeModal(); closeDrawer(); } });
+
+/* ===================== QUOTE DRAWER ===================== */
+const drawer = document.getElementById('drawer');
+const drawerOverlay = document.getElementById('drawerOverlay');
+const drawerItems = document.getElementById('drawerItems');
+const drawerFoot = document.getElementById('drawerFoot');
+const quoteBadge = document.getElementById('quoteBadge');
+
+function toggleQuote(id){
+  const existing = quoteList.find(q=>q.id===id);
+  if(existing){
+    quoteList = quoteList.filter(q=>q.id!==id);
+  } else {
+    quoteList.push({id, qty:1});
+  }
+  updateQuoteUI();
+  renderGrid();
+}
+
+function removeFromQuote(id){
+  quoteList = quoteList.filter(q=>q.id!==id);
+  updateQuoteUI();
+  renderGrid();
+}
+
+function updateQuoteUI(){
+  quoteBadge.textContent = quoteList.length;
+  if(quoteList.length === 0){
+    drawerItems.innerHTML = `<div class="drawer-empty">Your quote list is empty.<br>Tap the “+” on any product to add it here.</div>`;
+    drawerFoot.style.display = 'none';
+    return;
+  }
+  let total = 0;
+  drawerItems.innerHTML = quoteList.map(q => {
+    const p = PRODUCTS.find(x=>x.id===q.id);
+    total += p.price * q.qty;
+    return `<div class="drawer-item">
+      <img src="${p.img}" alt="${p.name}">
+      <div class="drawer-item-info">
+        <strong>${p.name}</strong>
+        <span class="mono">KES ${p.price.toLocaleString()}</span>
+        <div><button data-remove="${p.id}">Remove</button></div>
+      </div>
+    </div>`;
+  }).join('');
+  drawerItems.querySelectorAll('[data-remove]').forEach(b=>b.addEventListener('click', ()=>removeFromQuote(parseInt(b.getAttribute('data-remove')))));
+
+  document.getElementById('drawerTotal').textContent = `KES ${total.toLocaleString()}`;
+  const lines = quoteList.map(q=>{
+    const p = PRODUCTS.find(x=>x.id===q.id);
+    return `• ${p.name} — KES ${p.price.toLocaleString()}`;
+  }).join('\n');
+  const msg = `Hi PHOTON Electronics, I'd like a quote for:\n${lines}\n\nEstimated total: KES ${total.toLocaleString()}`;
+  document.getElementById('drawerWhatsapp').href = `https://wa.me/${SHOP_PHONE}?text=${encodeURIComponent(msg)}`;
+  drawerFoot.style.display = 'flex';
+}
+
+function openDrawer(){ drawer.classList.add('open'); drawerOverlay.classList.add('open'); }
+function closeDrawer(){ drawer.classList.remove('open'); drawerOverlay.classList.remove('open'); }
+document.getElementById('quoteBtn').addEventListener('click', openDrawer);
+document.getElementById('drawerClose').addEventListener('click', closeDrawer);
+drawerOverlay.addEventListener('click', closeDrawer);
+
+/* ===================== CONTACT FORM ===================== */
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('cfName').value.trim();
+  const phone = document.getElementById('cfPhone').value.trim();
+  const msg = document.getElementById('cfMsg').value.trim();
+  const waMsg = `Hi PHOTON Electronics, my name is ${name} (${phone}). ${msg}`;
+  window.open(`https://wa.me/${SHOP_PHONE}?text=${encodeURIComponent(waMsg)}`, '_blank');
+  document.getElementById('cfNote').textContent = "Thanks! We've opened WhatsApp with your message ready to send.";
+  e.target.reset();
+});
+
+/* ===================== INIT ===================== */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+(async function init(){
+  grid.innerHTML = `<div class="no-results"><strong>Loading products…</strong></div>`;
+  await loadProducts();
+  buildFilters();
+  renderGrid();
+  updateQuoteUI();
+})();
+</script>
+</body>
+</html>
